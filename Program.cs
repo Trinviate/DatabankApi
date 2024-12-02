@@ -1,7 +1,12 @@
-
-
+using DatabankApi.Database;
+using Npgsql;
 
 var builder = WebApplication.CreateBuilder(args);
+var config = builder.Configuration;
+
+
+
+
 var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
